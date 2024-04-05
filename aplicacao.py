@@ -14,37 +14,44 @@ class Aplicacao(tk.Tk):
         return [resposta.get() for resposta in self.respostas_var]
 
     def criar_interface(self):
+        # Configurar pesos de coluna para tornar a interface responsiva
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
+        self.grid_columnconfigure(3, weight=1)
+
         tk.Label(self, text="Data de Nascimento (DD/MM/AAAA):").grid(row=0, column=0, sticky='w')
         self.data_nascimento_entry = tk.Entry(self)
-        self.data_nascimento_entry.grid(row=0, column=1)
+        self.data_nascimento_entry.grid(row=0, column=1, columnspan=3, sticky='ew')
 
         tk.Label(self, text="Gênero:").grid(row=1, column=0, sticky='w')
         self.genero_var = tk.StringVar()
         genero_options = [
-            ("Masculino", "Masculino"),
-            ("Feminino", "Feminino"),
-            ("Não binário", "Não binário"),
-            ("Agênero", "Agênero"),
-            ("Gênero fluido", "Gênero fluido"),
-            ("Bigênero", "Bigênero"),
-            ("Transgênero", "Transgênero"),
-            ("Intersexo", "Intersexo"),
-            ("Outro", "Outro"),
-            ("Prefiro não dizer", "Prefiro não dizer")
+            "Masculino",
+            "Feminino",
+            "Não binário",
+            "Agênero",
+            "Gênero fluido",
+            "Bigênero",
+            "Transgênero",
+            "Intersexo",
+            "Outro",
+            "Prefiro não dizer"
         ]
-        for i, (text, value) in enumerate(genero_options):
-            tk.Radiobutton(self, text=text, variable=self.genero_var, value=value).grid(row=i+2, column=0, sticky='w')
+        self.genero_dropdown = tk.OptionMenu(self, self.genero_var, *genero_options)
+        self.genero_dropdown.grid(row=1, column=1, columnspan=3, sticky='ew')
 
         self.respostas_var = []
         for i, pergunta in enumerate(self.pesquisa.perguntas):
-            tk.Label(self, text=pergunta).grid(row=i+3+len(genero_options), column=0, sticky='w')
+            tk.Label(self, text=pergunta).grid(row=i+2, column=0, sticky='w')
             resposta_var = tk.StringVar(value="")
             self.respostas_var.append(resposta_var)
-            tk.Radiobutton(self, text="Sim", variable=resposta_var, value="Sim").grid(row=i+3+len(genero_options), column=1, sticky='w')
-            tk.Radiobutton(self, text="Não", variable=resposta_var, value="Não").grid(row=i+3+len(genero_options), column=2, sticky='w')
-            tk.Radiobutton(self, text="Não sei responder", variable=resposta_var, value="Não sei responder").grid(row=i+3+len(genero_options), column=3, sticky='w')
+            tk.Radiobutton(self, text="Sim", variable=resposta_var, value="Sim").grid(row=i+2, column=1, sticky='w')
+            tk.Radiobutton(self, text="Não", variable=resposta_var, value="Não").grid(row=i+2, column=2, sticky='w')
+            tk.Radiobutton(self, text="Não sei responder", variable=resposta_var, value="Não sei responder").grid(row=i+2, column=3, sticky='w')
 
-        tk.Button(self, text="Salvar", command=self.salvar_pesquisa).grid(row=len(self.pesquisa.perguntas)+4+len(genero_options), columnspan=4)
+        # Define o tamanho do botão "Salvar" para 20 caracteres
+        tk.Button(self, text="Salvar", command=self.salvar_pesquisa, width=20).grid(row=len(self.pesquisa.perguntas)+3, column=0, columnspan=4, sticky='ew')
 
     def salvar_pesquisa(self):
         data_nascimento_str = self.data_nascimento_entry.get()
