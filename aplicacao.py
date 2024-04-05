@@ -25,7 +25,7 @@ class Aplicacao(tk.Tk):
         self.data_nascimento_entry.grid(row=0, column=1, columnspan=3, sticky='ew')
 
         tk.Label(self, text="Gênero:").grid(row=1, column=0, sticky='w')
-        self.genero_var = tk.StringVar()
+        self.genero_var = tk.StringVar(value="Selecione seu gênero")  # Defina o valor inicial como None
         genero_options = [
             "Masculino",
             "Feminino",
@@ -40,11 +40,12 @@ class Aplicacao(tk.Tk):
         ]
         self.genero_dropdown = tk.OptionMenu(self, self.genero_var, *genero_options)
         self.genero_dropdown.grid(row=1, column=1, columnspan=3, sticky='ew')
+        self.genero_dropdown.config(indicatoron=0)
 
         self.respostas_var = []
         for i, pergunta in enumerate(self.pesquisa.perguntas):
             tk.Label(self, text=pergunta).grid(row=i+2, column=0, sticky='w')
-            resposta_var = tk.StringVar(value="")
+            resposta_var = tk.StringVar(value={None})  # Defina o valor inicial como vazio
             self.respostas_var.append(resposta_var)
             tk.Radiobutton(self, text="Sim", variable=resposta_var, value="Sim").grid(row=i+2, column=1, sticky='w')
             tk.Radiobutton(self, text="Não", variable=resposta_var, value="Não").grid(row=i+2, column=2, sticky='w')
@@ -81,9 +82,9 @@ class Aplicacao(tk.Tk):
 
     def limpar_campos(self):
         self.data_nascimento_entry.delete(0, tk.END)
-        self.genero_var.set("")
+        self.genero_var.set("Selecione seu gênero")
         for resposta_var in self.respostas_var:
-            resposta_var.set("")
+            resposta_var.set({None})
 
 if __name__ == "__main__":
     app = Aplicacao()
