@@ -59,6 +59,7 @@ class Aplicacao(tk.Tk):
         try:
             self.pesquisa.data_nascimento = datetime.strptime(data_nascimento_str, '%d/%m/%Y').date()
             self.pesquisa.idade = self.pesquisa.calcular_idade(self.pesquisa.data_nascimento)
+            
         except ValueError:
             messagebox.showerror("Erro", "Formato de data inválido. Use o formato DD/MM/AAAA.")
             return 

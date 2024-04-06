@@ -17,10 +17,14 @@ class Pesquisa:
 
     def calcular_idade(self, data_nascimento):
         hoje = date.today()
+        if data_nascimento > hoje:
+            raise ValueError("A data do nascimento não pode ser no futuro.")
+        
         ano_nascimento = data_nascimento.year
         mes_nascimento = data_nascimento.month
         dia_nascimento = data_nascimento.day
         idade = hoje.year - ano_nascimento - ((hoje.month, hoje.day) < (mes_nascimento, dia_nascimento))
+        
         return idade
 
     def salvar_respostas(self):
