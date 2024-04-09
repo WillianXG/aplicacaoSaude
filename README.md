@@ -2,7 +2,7 @@
 
 Este é um programa simples em Python para coletar dados de uma pesquisa de saúde e armazená-los em um arquivo CSV. A pesquisa consiste em algumas perguntas relacionadas a hábitos de saúde e estilo de vida.
 
-## Link para aplicação
+## Link para o projeto em grupo
 
 [Projeto Grupo 1](https://github.com/davidlgomes/trabalhoModulo1Grupo3.git)
 
