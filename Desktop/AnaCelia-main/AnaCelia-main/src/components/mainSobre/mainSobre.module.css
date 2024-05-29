@@ -1,0 +1,72 @@
+/* Adicione estilos globais conforme necessário */
+.mainContainer h1,
+.mainContainer p,
+.mainContainer2 h1,
+.mainContainer2 p {
+  color: black;
+}
+
+.texto1Container,
+.texto1Container2 {
+  flex-grow: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+
+.mainContainer,
+.mainContainer2 {
+  margin-top: 10rem;
+  background-color: #d7a9a9;
+  display: flex;
+  align-items: center;
+  min-height: 200px; /* Adicione uma altura mínima */
+}
+
+.imgContainer,
+.imgContainer2 {
+  margin-right: 20px;
+  margin-left: 1rem;
+}
+
+.imgContainer img,
+.imgContainer2 img {
+  max-width: 100%;
+}
+
+
+.Titulo,
+.Titulo2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 755px) {
+  .mainContainer,
+  .mainContainer2 {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem; /* Reduz a margem superior para dispositivos menores */
+  }
+
+  .mapContainer {
+    margin-bottom: 20px; /* Adiciona um espaço entre o mapa e o texto */
+    max-width: 100%; /* Define a largura máxima para o mapa */
+    width: 100%; /* Garante que o mapa ocupe a largura total do contêiner */
+    height: 300px; /* Define a altura desejada para o mapa */
+    overflow: hidden; /* Oculta qualquer conteúdo que se estenda para fora do contêiner */
+  }
+  
+
+  .imgContainer,
+  .imgContainer2 {
+    margin: 0;
+  }
+
+  .imgContainer img,
+  .imgContainer2 img {
+    margin-bottom: 1rem;
+  }
+}

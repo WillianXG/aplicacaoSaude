@@ -1,0 +1,114 @@
+/* Estilos globais */
+body {
+  margin: 0;
+  background-color: red;
+  font-family: 'Lora', serif;
+}
+
+/* Estilos para o mainContainer */
+.mainContainer {
+  margin-top: 5rem;
+  background-color: #D7A9A9;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Reduz o espaço entre os elementos */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.mainContainer h1,
+.mainContainer p {
+  color: black;
+  font-size: xx-large;
+}
+
+.imgContainer {
+  margin-right: 10px; /* Reduz a margem direita */
+  margin-left: 1rem;
+}
+
+.imgContainer img {
+  max-width: 100%;
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+}
+
+
+.texto_1{
+  size: 1;
+}
+
+.Titulo {
+  text-align: center;
+}
+
+/* Estilos para o mainContainer2 */
+.mainContainer2 {
+  margin-top: 5rem;
+  background-color: #D7A9A9;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Reduz o espaço entre os elementos */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.mainContainer2 h1,
+.mainContainer2 p {
+  color: black;
+  font-size: xx-large;
+}
+
+.imgContainer2 {
+  margin-right: 10px; /* Reduz a margem direita */
+  margin-left: 1rem;
+}
+
+.imgContainer2 img {
+  max-width: 100%;
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+}
+
+.texto1Container2 {
+  flex-grow: 1;
+}
+
+.Titulo2 {
+  text-align: center;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 755px) {
+
+  .mainContainer,
+  .mainContainer2 {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+      gap: 10px; /* Reduz o espaço entre os elementos */
+  }
+
+  .mainContainer h1,
+  .mainContainer p,
+  .mainContainer2 h1,
+  .mainContainer2 p {
+      color: black;
+      font-size: larger;
+  }
+  .mainContainer2
+
+  .imgContainer,
+  .imgContainer2 {
+      margin: 0;
+  }
+
+  .imgContainer img,
+  .imgContainer2 img {
+      margin-bottom: 1rem;
+  }
+
+  .texto1Container,
+  .texto1Container2 {
+      margin-left: 0;
+  }
+}

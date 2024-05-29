@@ -1,0 +1,12 @@
+/* Estilo para o botão MDB */
+.customButton {
+    color: #fff; /* Define a cor do texto */
+    border-color: white;
+    /* Outras propriedades de estilo conforme necessário */
+  }
+
+.customButton:hover {
+    background-color: rgb(112, 84, 88); /* Altera a cor de fundo quando o mouse passa por cima */
+    border: rgb(112, 84, 88);
+    color: pink;
+}

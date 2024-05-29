@@ -1,0 +1,36 @@
+.meu-carousel {
+  width: 80%;
+  margin: 0 auto; /* Para centralizar o carousel */
+}
+
+.carousel-container {
+    position: relative;
+  }
+  
+  .carousel-title {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
+  @media (max-width: 755px) {
+    .carousel-title {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        font-size: 22px;
+        transform: translate(-50%, -50%);
+        margin: 0;
+         white-space: nowrap;
+      }
+
+    .meu-carousel {
+      width: 100%; /* Largura do carousel quando a tela for maior ou igual a 755px */
+    }
+  }
+  
+  
+
+

@@ -1,0 +1,34 @@
+/* iconsform.module.css */
+
+.iconContainer {
+  display: flex;
+  flex-direction: column; /* Para que os elementos fiquem em uma coluna */
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  position: relative;
+}
+
+.iconContainer h1 {
+  margin-bottom: 20px; /* Adicione um espaço abaixo do h1 */
+}
+
+.iconContainer .icons {
+  display: flex; /* Para manter os ícones em linha (horizontal) */
+}
+
+.iconContainer .icons .icon1 {
+  font-size: 30px; /* Defina o tamanho dos ícones aqui */
+  margin: 0 10px;
+  color: green; /* Defina a cor dos ícones */
+}
+.iconContainer .icons .icon2 {
+  font-size: 30px; /* Defina o tamanho dos ícones aqui */
+  margin: 0 10px;
+  color: rgb(233, 61, 90); /* Defina a cor dos ícones */
+}
+.iconContainer .icons .icon3 {
+  font-size: 30px; /* Defina o tamanho dos ícones aqui */
+  margin: 0 10px;
+  color: black; /* Defina a cor dos ícones */
+}

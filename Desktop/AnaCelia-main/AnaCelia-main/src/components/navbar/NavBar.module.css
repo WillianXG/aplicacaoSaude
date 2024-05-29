@@ -1,0 +1,193 @@
+.navBtn {
+  text-decoration: none;
+  outline: 1px solid transparent;
+  outline: none  !important;
+
+}
+
+
+.header {
+  padding-inline: 16px;
+}
+
+
+.nav {
+  width: 100%;
+  height: 70px;
+  margin-inline: auto;
+  background-color: #D7A9A9;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  font-size: 15px;
+  margin: 15px;
+}
+
+.navList {
+  margin-top: 15px;
+  background-color: #D7A9A9;
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-size: 18px;
+  color: white;
+  padding-block: 16px;
+}
+
+.navList a {
+  text-decoration: none !important; 
+  color: white !important; /* Define a cor do texto como preto */
+}
+
+
+.customLink {
+  text-decoration: none !important; /* Remove a decoração de texto */
+  color: white !important; /* Herda a cor do texto do pai */
+}
+
+
+.logo {
+  text-decoration: none; /* Remove a decoração de texto */
+}
+
+.logo h1 {
+  background-color: #D7A9A9;
+  text-decoration: none;
+}
+
+
+.navList a {
+  background-color: #D7A9A9;
+  padding-block: 16px;
+}
+
+.optBtn a {
+  background-color: #D7A9A9;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+}
+
+.optBtn a:hover {
+  background-color: #977272;
+  border-radius: 15px;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+@media (max-width: 755px) {
+
+
+
+  .hamburger {
+    display: block;
+    z-index: 1;
+    margin: 15px;
+  }
+
+  .nav{
+    width: 100%;
+  }
+  .header{
+    min-width: 100%;
+  }
+
+  .navList {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #D7A9A9;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    margin-bottom: 215px;
+
+  }
+ 
+
+  .navList a {
+    font-size: 24px;
+    opacity: 0;
+    background-color: #D7A9A9;
+  }
+
+  .navList li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .navList li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .navList li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  .noScroll {
+    overflow: hidden;
+  }
+  
+
+  .nav.active .navList {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .navList a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+

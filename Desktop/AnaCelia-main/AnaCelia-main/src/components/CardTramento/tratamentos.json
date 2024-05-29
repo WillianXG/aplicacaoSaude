@@ -1,0 +1,59 @@
+{
+  "tratamentos_psicologicos": [
+    {
+      "nome": "Terapia Cognitivo-Comportamental (TCC)",
+      "descricao": "Foca na modificação de padrões de pensamento e comportamento para ajudar a desenvolver habilidades de enfrentamento. Indicada para depressão, ansiedade, TOC e TEPT.",
+      "indicacoes": "Condições emocionais e comportamentais.",
+      "tecnicas": [
+        "Identificação e modificação de pensamentos distorcidos",
+        "Desenvolvimento de habilidades de enfrentamento",
+        "Exposição gradual a situações temidas",
+        "Técnicas de relaxamento e respiração"
+      ]
+    },
+    {
+      "nome": "Psicoterapia Psicodinâmica",
+      "descricao": "Explora como experiências passadas e relacionamentos afetam o presente. Indicada para quem busca uma compreensão mais profunda de si e de seus relacionamentos.",
+      "indicacoes": "Compreensão de processos inconscientes e padrões de relacionamento.",
+      "tecnicas": [
+        "Análise do inconsciente",
+        "Exploração de transferência e contratransferência",
+        "Interpretação de sonhos e fantasias",
+        "Revisão de padrões de relacionamento"
+      ]
+    },
+    {
+      "nome": "Terapia Psicanalítica",
+      "descricao": "Baseada na teoria de Sigmund Freud, explora processos inconscientes e sua influência no presente. Indicada para pessoas com depressão, ansiedade e problemas de relacionamento.",
+      "indicacoes": "Compreensão de traumas e conflitos internos.",
+      "tecnicas": [
+        "Associação livre",
+        "Interpretação de sonhos",
+        "Análise de resistências",
+        "Transferência e contratransferência"
+      ]
+    },
+    {
+      "nome": "Terapia Interpessoal (TIP)",
+      "descricao": "Focada nos relacionamentos interpessoais, ajudando a resolver conflitos e melhorar a comunicação. Indicada para quem enfrenta problemas de relacionamento ou transições de vida significativas.",
+      "indicacoes": "Problemas de relacionamento e comunicação.",
+      "tecnicas": [
+        "Identificação de padrões de relacionamento",
+        "Melhoria da comunicação",
+        "Resolução de conflitos interpessoais",
+        "Desenvolvimento de habilidades sociais"
+      ]
+    },
+    {
+      "nome": "Terapia de Aceitação e Compromisso (ACT)",
+      "descricao": "Baseada em valores, ajuda a aceitar experiências internas e a se comprometer com ações alinhadas aos valores pessoais. Indicada para ansiedade, depressão e outras questões emocionais.",
+      "indicacoes": "Questões emocionais e evitação emocional.",
+      "tecnicas": [
+        "Mindfulness",
+        "Defusão cognitiva",
+        "Clarificação de valores",
+        "Compromisso com ação valiosa"
+      ]
+    }
+  ]
+}

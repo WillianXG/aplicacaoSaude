@@ -1,0 +1,14 @@
+
+
+body {
+    background-color: #FFD6D7;
+    width: 100%;
+ 
+
+}
+
+@media (min-width: 755px){
+    body{
+        max-width: 100%
+    };
+}

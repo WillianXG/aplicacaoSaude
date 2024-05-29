@@ -1,0 +1,67 @@
+/* footer.css */
+
+/* Estilo para o contêiner dos ícones */
+.icon-container {
+  display: flex; /* Usando flexbox para alinhar os ícones */
+  flex-direction: column; /* Alinhamento vertical dos ícones */
+}
+
+/* Estilo para cada parágrafo contendo um ícone */
+.icon-container p {
+  margin-bottom: 10px; /* Espaço entre cada parágrafo */
+}
+
+/* Estilo para os ícones */
+.icon {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  color: white; /* Cor dos ícones */
+}
+
+/* Estilo para o contêiner dos links úteis */
+.link-container {
+  display: flex; /* Usando flexbox para alinhar os links */
+  flex-direction: column; /* Alinhamento vertical dos links */
+}
+
+/* Estilo para cada parágrafo contendo um link */
+.link-container p {
+  margin-bottom: 10px; /* Espaço entre cada parágrafo */
+}
+
+/* Estilo para a cor de fundo do footer */
+.custom-bg-color {
+  background-color: #D7A9A9; /* Cor de fundo desejada */
+}
+/* footer.css */
+
+/* Estilo para o contêiner dos ícones */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhamento dos ícones à esquerda */
+}
+
+/* Estilo para cada parágrafo contendo um ícone */
+.icon-container p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para os ícones */
+.icon {
+  margin-right: 10px;
+  color: white;
+}
+
+/* Estilo para o contêiner dos links úteis */
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhamento dos links à esquerda */
+}
+
+/* Estilo para cada parágrafo contendo um link */
+.link-container p {
+  margin-bottom: 10px;
+}

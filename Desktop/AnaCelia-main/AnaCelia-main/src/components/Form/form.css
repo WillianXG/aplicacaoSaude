@@ -1,0 +1,49 @@
+/* Adicione o seguinte CSS ao seu arquivo form.css */
+
+/* Container do formulário */
+.form-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Campos do formulário */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Mensagens de erro */
+.form-container .error {
+  color: red;
+  font-size: 8px;
+}
+
+/* Botão de envio */
+.form-container button[type="submit"] {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #ff4f4f;
+}
+
+/* Mensagem de status */
+.form-container .status-message {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
